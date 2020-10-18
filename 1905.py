@@ -14,7 +14,7 @@ def find(mat, coord, i, j):
                 find(mat, coord, i, j+1)
             if(j - 1 >= 0 and mat[i][j-1] == 0 and not coord[i][j-1]['visited'] ):
                 find(mat, coord, i, j-1)
-            if(i + 1 < 5 and mat[i+1][j] == 0 and not coord[i+1][j-1]['visited'] ):
+            if(i + 1 < 5 and mat[i+1][j] == 0 and not coord[i+1][j]['visited'] ):
                 find(mat, coord, i+1, j)
             if(i - 1 >= 0 and mat[i-1][j] == 0 and not coord[i-1][j]['visited'] ):
                 find(mat, coord, i-1, j)
@@ -54,7 +54,6 @@ for i in range(t):
         result.append("COPS")
     else:
         result.append("ROBBERS")
-
 for i in result:
     print(i)
 
